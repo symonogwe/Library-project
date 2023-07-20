@@ -1,5 +1,11 @@
 
 
+// LIBRARY ARRAY OF BOOK OBJECTS
+
+let myLibrary = [];
+
+// BOOK CONSTRUCTOR FUNCTION
+
 function Book(title, author, pages, readBook) {
   this.title = title;
   this.author = author;
@@ -10,6 +16,14 @@ function Book(title, author, pages, readBook) {
   }
 }
 
-const book1 = new Book("Rational Male", "Rollo Tommasi", 678, "read");
+// FUNCTION THAT ADDS BOOKS TO LIBRARY ARRAY
 
-console.log(Object.getPrototypeOf((Book.prototype)));
+function addBookToLibrary() {
+    let myBook = new Book("Rational Male", "Rollo Tommasi", 678, "read");
+    myLibrary.push(myBook);
+}
+
+addBookToLibrary();
+console.log(myLibrary);
+
+// const book1 = new Book("Rational Male", "Rollo Tommasi", 678, "read");
