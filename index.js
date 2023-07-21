@@ -26,6 +26,15 @@ function addBookToLibrary() {
 addBookToLibrary();
 console.log(myLibrary[0]);
 
+// ADD NEW BOOK FN()
+function addNewBook() {
+  let formField = document.getElementById("form-container");
+  formField.style.display = "block";
+}
+
+const addBookBtn = document.querySelector(".add-book-btn");
+addBookBtn.addEventListener("click", addNewBook)
+
 // DOM MANIPULATION
 // created card 
 let divCard = document.createElement("div");
