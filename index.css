@@ -28,6 +28,7 @@ body {
 .lib-container {
     background-color: var(--base-color);
     height: 100vh;
+    position: relative;
 }
 
 .lib-header {
@@ -78,10 +79,36 @@ body {
 .book-cards-container {
     border: 2px solid red;
     height: 60%;
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
+
+
+/* FORM STYLING */
+fieldset {
+    width: 60vw;
+    padding: .4em 1em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+}
+
+.book-options {
+    margin-top: .9em;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+}
+
+label {
+    font-family: var(--base-header-ff);
+}
+
+
 
 
 /* DOM STYLING */
