@@ -27,7 +27,7 @@ addBookToLibrary();
 console.log(myLibrary[0]);
 
 // DOM MANIPULATION
-// main card
+// created card 
 let divCard = document.createElement("div");
 
 // created paragraphs
@@ -43,9 +43,13 @@ pages.textContent = "pages: " + myLibrary[0].pages;
 let readBook = document.createElement("p");
 readBook.textContent = "readBook: " + myLibrary[0].readBook;
 
+// append all paragraphs to created card
 divCard.append(author, title, pages, readBook);
+divCard.classList.add("book-card")
 
-
+// select book-card-container
 const cardContainer = document.querySelector(".book-cards-container");
+
+// append created card to book-cards-container
 cardContainer.append(divCard);
 console.log(cardContainer);
