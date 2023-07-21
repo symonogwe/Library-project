@@ -53,7 +53,6 @@ body {
 }
 
 .add-book {
-    border: 2px solid red;
     height: 8%;
     display: flex;
     justify-content: center;
@@ -74,4 +73,12 @@ body {
 .add-book-btn:hover {
     font-size: calc(.9rem + .8vw);
     transition: .5s;
+}
+
+.book-cards {
+    border: 2px solid red;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
