@@ -24,6 +24,28 @@ function addBookToLibrary() {
 }
 
 addBookToLibrary();
-console.log(myLibrary);
+console.log(myLibrary[0]);
 
-// const book1 = new Book("Rational Male", "Rollo Tommasi", 678, "read");
+// DOM MANIPULATION
+// main card
+let divCard = document.createElement("div");
+
+// created paragraphs
+let author = document.createElement("p");
+author.textContent = "author: " + myLibrary[0].author;
+
+let title = document.createElement("p");
+title.textContent = "title: " + myLibrary[0].title;
+
+let pages = document.createElement("p");
+pages.textContent = "pages: " + myLibrary[0].pages;
+
+let readBook = document.createElement("p");
+readBook.textContent = "readBook: " + myLibrary[0].readBook;
+
+divCard.append(author, title, pages, readBook);
+
+
+const cardContainer = document.querySelector(".book-cards");
+cardContainer.append(divCard);
+console.log(cardContainer);
