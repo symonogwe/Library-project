@@ -5,6 +5,11 @@
     --sub-base-color: #ff9f1c;
     --header-fs: calc(.9rem + 2vw);
     --paragraph-fs: (.5rem + .6vw);
+    --logo-width: max(30px, 25%);
+    --main-paragraph-fs: calc(1rem + .6vw);
+    --base-header-ff: "Bebas Neue", sans-serif;
+    --base-paragraph-ff: "League Spartan", sans-serif;
+    
 }
 
 * {
