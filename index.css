@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
     --base-color: #2ec4b6;
     --sub-color: #cbf3f0;
     --sub-base-color: #ff9f1c;
     --header-fs: calc(.9rem + 2vw);
-    --paragraph-fs: (.5rem + .6vw);
+    --paragraph-fs: calc(.5rem + .6vw);
+    --button-fs: calc(.7rem + .7vw);
     --logo-width: max(20px, 10%);
     --main-paragraph-fs: calc(1rem + .6vw);
     --base-header-ff: "Bebas Neue", sans-serif;
@@ -28,10 +31,10 @@ body {
 }
 
 .lib-header {
-    border: 2px solid red;
     height: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 50px;
 }
 
 .library-icon {
@@ -45,5 +48,30 @@ body {
     grid-column: 2 / 3;
     justify-self: self-start;
     font-size: var(--header-fs);
+    font-family: var(--base-header-ff);
     align-self: center;
+}
+
+.add-book {
+    border: 2px solid red;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-book-btn {
+    background-color: var(--sub-base-color);
+    border: none;
+    font-size: var(--button-fs);
+    color: var(--sub-color);
+    font-family: var(--base-paragraph-ff);
+    border-radius: 10px;
+    padding: .4em .8em;
+    cursor: pointer;
+}
+
+.add-book-btn:hover {
+    font-size: calc(.9rem + .8vw);
+    transition: .5s;
 }
