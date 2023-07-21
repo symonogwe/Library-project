@@ -5,7 +5,7 @@
     --sub-base-color: #ff9f1c;
     --header-fs: calc(.9rem + 2vw);
     --paragraph-fs: (.5rem + .6vw);
-    --logo-width: max(30px, 25%);
+    --logo-width: max(20px, 10%);
     --main-paragraph-fs: calc(1rem + .6vw);
     --base-header-ff: "Bebas Neue", sans-serif;
     --base-paragraph-ff: "League Spartan", sans-serif;
@@ -34,9 +34,16 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
+.library-icon {
+    width: var(--logo-width);
+    grid-column: 1 / 2;
+    align-self: center;
+    justify-self: end;
+}
+
 .header-h2 {
     grid-column: 2 / 3;
-    justify-self: center;
+    justify-self: self-start;
     font-size: var(--header-fs);
     align-self: center;
 }
