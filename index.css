@@ -1,0 +1,37 @@
+
+:root {
+    --base-color: #2ec4b6;
+    --sub-color: #cbf3f0;
+    --sub-base-color: #ff9f1c;
+    --header-fs: calc(.9rem + 2vw);
+    --paragraph-fs: (.5rem + .6vw);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.lib-container {
+    background-color: var(--base-color);
+    height: 100vh;
+}
+
+.lib-header {
+    border: 2px solid red;
+    height: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-h2 {
+    grid-column: 2 / 3;
+    justify-self: center;
+    font-size: var(--header-fs);
+    align-self: center;
+}
