@@ -88,6 +88,10 @@ body {
 
 
 /* FORM STYLING */
+#form-container {
+    display: none;
+}
+
 fieldset {
     width: 60vw;
     padding: .4em 1em;
