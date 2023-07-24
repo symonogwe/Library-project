@@ -69,6 +69,8 @@ function displayBooks() {
       let divCard = document.createElement("div");
       divCard.classList.add("book-card");
 
+      divCard.dataset.index = myLibrary.indexOf(obj);
+
       
       let author = document.createElement("p");
       author.textContent = "author: " + obj.author;
@@ -84,6 +86,10 @@ function displayBooks() {
 
       let removeBtn = document.createElement("button");
       removeBtn.textContent = "Delete";
+      removeBtn.addEventListener("click", () => {
+        myLibrary.splice(divCard.dataset.index, 1);
+        console.log(myLibrary);
+      });
   
       divCard.append(author, title, pages, readBook, removeBtn);
 
@@ -94,6 +100,8 @@ function displayBooks() {
   } else {
     let divCard = document.createElement("div");
     divCard.classList.add("book-card");
+
+    divCard.dataset.index = myLibrary[myLibrary.length - 1];
 
     let author = document.createElement("p");
     author.textContent = "author: " + myLibrary[myLibrary.length - 1].author;
@@ -109,6 +117,10 @@ function displayBooks() {
 
     let removeBtn = document.createElement("button");
     removeBtn.textContent = "Delete";
+    removeBtn.addEventListener("click", () => {
+      myLibrary.splice(divCard.dataset.index, 1);
+      console.log(myLibrary);
+    });
 
     divCard.append(author, title, pages, readBook, removeBtn);
 
