@@ -1,4 +1,5 @@
 
+// GLOBAL VARIABLES
 let formField = document.getElementById("form-container");
 
 
