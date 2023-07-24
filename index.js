@@ -1,6 +1,7 @@
 
 // GLOBAL VARIABLES
 let formField = document.getElementById("form-container");
+const cardContainer = document.querySelector(".book-cards-container");
 
 
 // LIBRARY ARRAY OF BOOK OBJECTS
@@ -38,6 +39,7 @@ function addBookToLibrary() {
   inputs.forEach(i => i.value = " ");
   formField.style.display = "none";
   console.log(myLibrary);
+  displayBooks();
 }
 
 let submitBtn = document.querySelector(".submit-btn");
@@ -53,29 +55,48 @@ const addBookBtn = document.querySelector(".add-book-btn");
 addBookBtn.addEventListener("click", addNewBook)
 
 // DOM MANIPULATION
-// created card 
-let divCard = document.createElement("div");
+// function that displays books to the page
+function displayBooks() {
+  if (cardContainer.innerHTML === "") {
+    myLibrary.forEach(obj => {
+      let divCard = document.createElement("div");
+      
+      let author = document.createElement("p");
+      author.textContent = "author: " + obj.author;
+  
+      let title = document.createElement("p");
+      title.textContent = "title: " + obj.title;
+  
+      let pages = document.createElement("p");
+      pages.textContent = "pages: " + obj.pages;
+  
+      let readBook = document.createElement("p");
+      readBook.textContent = "readBook: " + obj.readBook;
+  
+      divCard.append(author, title, pages, readBook);
+  
+      cardContainer.append(divCard);
+      console.log(cardContainer);
+    });
+  } else {
+    let divCard = document.createElement("div");
 
-// created paragraphs
-// let author = document.createElement("p");
-// author.textContent = "author: " + myLibrary[0].author;
+    let author = document.createElement("p");
+    author.textContent = "author: " + myLibrary[myLibrary.length - 1].author;
 
-// let title = document.createElement("p");
-// title.textContent = "title: " + myLibrary[0].title;
+    let title = document.createElement("p");
+    title.textContent = "title: " + myLibrary[myLibrary.length - 1].title;
 
-// let pages = document.createElement("p");
-// pages.textContent = "pages: " + myLibrary[0].pages;
+    let pages = document.createElement("p");
+    pages.textContent = "pages: " + myLibrary[myLibrary.length - 1].pages;
 
-// let readBook = document.createElement("p");
-// readBook.textContent = "readBook: " + myLibrary[0].readBook;
+    let readBook = document.createElement("p");
+    readBook.textContent = "readBook: " + myLibrary[myLibrary.length - 1].readBook;
 
-// append all paragraphs to created card
-// divCard.append(author, title, pages, readBook);
-// divCard.classList.add("book-card")
+    divCard.append(author, title, pages, readBook);
 
-// select book-card-container
-const cardContainer = document.querySelector(".book-cards-container");
+    cardContainer.append(divCard);
 
-// append created card to book-cards-container
-cardContainer.append(divCard);
-console.log(cardContainer);
+    myLibrary[myLibrary.length - 1]
+  }
+}
