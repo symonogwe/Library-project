@@ -17,6 +17,14 @@ function Book(title, author, pages, readBook) {
   }
 }
 
+// GENERIC PREDEFINED BOOKS
+let book1 = new Book("JS for beginners", "Symon", 678, "read");
+let book2 = new Book("CSS for you", "Opondi", 786, "read");
+
+myLibrary.push(book1)
+myLibrary.push(book2)
+console.log(myLibrary);
+
 // FUNCTION THAT ADDS BOOKS TO LIBRARY ARRAY
 function addBookToLibrary() {
   let author = document.getElementById("author-name").value;
@@ -38,7 +46,6 @@ submitBtn.addEventListener("click", addBookToLibrary);
 
 // ADD NEW BOOK FN()
 function addNewBook() {
-  // let formField = document.getElementById("form-container");
   formField.style.display = "block";
 }
 
