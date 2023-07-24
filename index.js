@@ -38,8 +38,11 @@ function addBookToLibrary() {
   let myBook = new Book(title, author, pages, checked);
   myLibrary.push(myBook);
 
-  let inputs = document.querySelectorAll("input");
-  inputs.forEach(i => i.value = " ");
+  let inputs = document.querySelectorAll(".input-1");
+  inputs.forEach(i => i.value = "");
+  document.getElementById("read-option").checked = false;
+  document.getElementById("not-read").checked = false;
+
   formField.style.display = "none";
   console.log(myLibrary);
   displayBooks();
@@ -104,6 +107,5 @@ function displayBooks() {
 
     cardContainer.append(divCard);
 
-    myLibrary[myLibrary.length - 1]
   }
 }
