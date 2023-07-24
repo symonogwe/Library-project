@@ -81,8 +81,12 @@ function displayBooks() {
   
       let readBook = document.createElement("p");
       readBook.textContent = "readBook: " + obj.readBook;
+
+      let removeBtn = document.createElement("button");
+      removeBtn.textContent = "Delete";
   
-      divCard.append(author, title, pages, readBook);
+      divCard.append(author, title, pages, readBook, removeBtn);
+
   
       cardContainer.append(divCard);
       console.log(cardContainer);
@@ -103,7 +107,10 @@ function displayBooks() {
     let readBook = document.createElement("p");
     readBook.textContent = "readBook: " + myLibrary[myLibrary.length - 1].readBook;
 
-    divCard.append(author, title, pages, readBook);
+    let removeBtn = document.createElement("button");
+    removeBtn.textContent = "Delete";
+
+    divCard.append(author, title, pages, readBook, removeBtn);
 
     cardContainer.append(divCard);
 
