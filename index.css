@@ -77,8 +77,6 @@ body {
 }
 
 .book-cards-container {
-    border: 5px solid var(--sub-base-color);
-    height: 60%;
     width: 80%;
     margin: 0 auto;
     display: grid;
@@ -95,6 +93,7 @@ body {
 }
 
 fieldset {
+    background-color: #cbf3f0;
     width: 60vw;
     padding: .4em 1em;
     position: absolute;
@@ -133,6 +132,7 @@ label {
 
 /* DOM STYLING */
 .book-card {
+    height: 15vh;
     background-color: var(--sub-color);
     border-radius: 12px;
     padding: .4em .8em;
