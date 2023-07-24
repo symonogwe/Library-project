@@ -133,3 +133,11 @@ label {
 .book-card {
     background-color: var(--sub-color);
 }
+
+.blur-class {
+    filter: blur(2px);
+}
+
+.not-blurred {
+    filter: blur(0px);
+}

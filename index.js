@@ -2,6 +2,7 @@
 // GLOBAL VARIABLES
 let formField = document.getElementById("form-container");
 const cardContainer = document.querySelector(".book-cards-container");
+const libContainer = document.querySelector(".lib-container");
 
 
 // LIBRARY ARRAY OF BOOK OBJECTS
@@ -28,6 +29,8 @@ console.log(myLibrary);
 
 // FUNCTION THAT ADDS BOOKS TO LIBRARY ARRAY
 function addBookToLibrary() {
+  libContainer.classList.remove("blur-class");
+
   let author = document.getElementById("author-name").value;
   let title = document.getElementById("book-title").value;
   let pages = document.getElementById("book-pages").value;
@@ -49,6 +52,7 @@ submitBtn.addEventListener("click", addBookToLibrary);
 // ADD NEW BOOK FN()
 function addNewBook() {
   formField.style.display = "block";
+  libContainer.classList.add("blur-class");
 }
 
 const addBookBtn = document.querySelector(".add-book-btn");
