@@ -84,6 +84,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    padding: .4em .8em;
 }
 
 
@@ -132,6 +134,10 @@ label {
 /* DOM STYLING */
 .book-card {
     background-color: var(--sub-color);
+    border-radius: 12px;
+    padding: .4em .8em;
+    font-family: var(--base-paragraph-ff);
+    box-shadow: 5px 10px 30px black;
 }
 
 .blur-class {

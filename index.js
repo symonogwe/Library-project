@@ -64,6 +64,8 @@ function displayBooks() {
   if (cardContainer.innerHTML === "") {
     myLibrary.forEach(obj => {
       let divCard = document.createElement("div");
+      divCard.classList.add("book-card");
+
       
       let author = document.createElement("p");
       author.textContent = "author: " + obj.author;
@@ -84,6 +86,7 @@ function displayBooks() {
     });
   } else {
     let divCard = document.createElement("div");
+    divCard.classList.add("book-card");
 
     let author = document.createElement("p");
     author.textContent = "author: " + myLibrary[myLibrary.length - 1].author;
