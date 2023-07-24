@@ -77,7 +77,7 @@ body {
 }
 
 .book-cards-container {
-    border: 2px solid red;
+    border: 5px solid var(--sub-base-color);
     height: 60%;
     width: 80%;
     margin: 0 auto;
