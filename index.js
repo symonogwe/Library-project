@@ -87,8 +87,14 @@ function displayBooks() {
       let removeBtn = document.createElement("button");
       removeBtn.textContent = "Delete";
       removeBtn.addEventListener("click", () => {
-        myLibrary.splice(divCard.dataset.index, 1);
+        let removed = myLibrary.splice(divCard.dataset.index, 1);
         console.log(myLibrary);
+        console.log(removed);
+        
+        if (divCard.textContent.includes(removed[0].title)) {
+          cardContainer.removeChild(divCard);
+        }
+        
       });
   
       divCard.append(author, title, pages, readBook, removeBtn);
@@ -101,7 +107,7 @@ function displayBooks() {
     let divCard = document.createElement("div");
     divCard.classList.add("book-card");
 
-    divCard.dataset.index = myLibrary[myLibrary.length - 1];
+    divCard.dataset.index = myLibrary.length - 1;
 
     let author = document.createElement("p");
     author.textContent = "author: " + myLibrary[myLibrary.length - 1].author;
@@ -118,8 +124,14 @@ function displayBooks() {
     let removeBtn = document.createElement("button");
     removeBtn.textContent = "Delete";
     removeBtn.addEventListener("click", () => {
-      myLibrary.splice(divCard.dataset.index, 1);
+      let removed = myLibrary.splice(divCard.dataset.index, 1);
       console.log(myLibrary);
+      console.log(removed);
+      console.log(removed[0]);
+      console.log(cardContainer);
+      if (divCard.textContent.includes(removed[0].title)) {
+        cardContainer.removeChild(divCard);
+      }
     });
 
     divCard.append(author, title, pages, readBook, removeBtn);
@@ -128,3 +140,5 @@ function displayBooks() {
 
   }
 }
+
+displayBooks();
