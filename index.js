@@ -90,11 +90,19 @@ function displayBooks() {
         let removed = myLibrary.splice(divCard.dataset.index, 1);
         console.log(myLibrary);
         console.log(removed);
+        console.log(removed[0]);
+        console.log(cardContainer);
         
         if (divCard.textContent.includes(removed[0].title)) {
           cardContainer.removeChild(divCard);
         }
-        
+        cardContainer.childNodes.forEach(div => {
+          myLibrary.forEach(obj => {
+            if (div.textContent.includes(obj.title))
+              div.dataset.index = myLibrary.indexOf(obj);
+          })
+        })
+
       });
   
       divCard.append(author, title, pages, readBook, removeBtn);
@@ -132,6 +140,13 @@ function displayBooks() {
       if (divCard.textContent.includes(removed[0].title)) {
         cardContainer.removeChild(divCard);
       }
+
+      cardContainer.childNodes.forEach(div => {
+        myLibrary.forEach(obj => {
+          if (div.textContent.includes(obj.title))
+            div.dataset.index = myLibrary.indexOf(obj);
+        })
+      })
     });
 
     divCard.append(author, title, pages, readBook, removeBtn);
