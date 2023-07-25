@@ -105,8 +105,12 @@ function displayBooks() {
         })
 
       });
+
+      let readToggle = document.createElement("button");
+      readToggle.textContent = "Read Status";
+      readToggle.classList.add("delete-btn");
   
-      divCard.append(author, title, pages, readBook, removeBtn);
+      divCard.append(author, title, pages, readBook, removeBtn, readToggle);
 
   
       cardContainer.append(divCard);
@@ -151,7 +155,11 @@ function displayBooks() {
       })
     });
 
-    divCard.append(author, title, pages, readBook, removeBtn);
+    let readToggle = document.createElement("button");
+    readToggle.textContent = "Read Status";
+    readToggle.classList.add("delete-btn");
+
+    divCard.append(author, title, pages, readBook, removeBtn, readToggle);
 
     cardContainer.append(divCard);
 
