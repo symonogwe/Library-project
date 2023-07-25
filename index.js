@@ -19,13 +19,16 @@ function Book(title, author, pages, readBook) {
   }
 }
 
+Book.prototype.changeReadStatus = function() {
+  console.log(this.readBook);
+}
+
 // GENERIC PREDEFINED BOOKS
 let book1 = new Book("JS for beginners", "Symon", 678, "read");
 let book2 = new Book("CSS for you", "Opondi", 786, "read");
 
 myLibrary.push(book1)
 myLibrary.push(book2)
-console.log(myLibrary);
 
 // FUNCTION THAT ADDS BOOKS TO LIBRARY ARRAY
 function addBookToLibrary() {
@@ -44,7 +47,6 @@ function addBookToLibrary() {
   document.getElementById("not-read").checked = false;
 
   formField.style.display = "none";
-  console.log(myLibrary);
   displayBooks();
 }
 
@@ -89,10 +91,6 @@ function displayBooks() {
       removeBtn.classList.add("delete-btn");
       removeBtn.addEventListener("click", () => {
         let removed = myLibrary.splice(divCard.dataset.index, 1);
-        console.log(myLibrary);
-        console.log(removed);
-        console.log(removed[0]);
-        console.log(cardContainer);
         
         if (divCard.textContent.includes(removed[0].title)) {
           cardContainer.removeChild(divCard);
@@ -109,12 +107,15 @@ function displayBooks() {
       let readToggle = document.createElement("button");
       readToggle.textContent = "Read Status";
       readToggle.classList.add("delete-btn");
-  
+      readToggle.addEventListener("click", () => {
+        obj.changeReadStatus();
+      })
+
+
       divCard.append(author, title, pages, readBook, removeBtn, readToggle);
 
   
       cardContainer.append(divCard);
-      console.log(cardContainer);
     });
   } else {
     let divCard = document.createElement("div");
@@ -139,10 +140,6 @@ function displayBooks() {
     removeBtn.classList.add("delete-btn");
     removeBtn.addEventListener("click", () => {
       let removed = myLibrary.splice(divCard.dataset.index, 1);
-      console.log(myLibrary);
-      console.log(removed);
-      console.log(removed[0]);
-      console.log(cardContainer);
       if (divCard.textContent.includes(removed[0].title)) {
         cardContainer.removeChild(divCard);
       }
@@ -158,6 +155,9 @@ function displayBooks() {
     let readToggle = document.createElement("button");
     readToggle.textContent = "Read Status";
     readToggle.classList.add("delete-btn");
+    readToggle.addEventListener("click", () => {
+    myLibrary[divCard.dataset.index].changeReadStatus();
+    })
 
     divCard.append(author, title, pages, readBook, removeBtn, readToggle);
 
