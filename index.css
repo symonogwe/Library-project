@@ -147,3 +147,19 @@ label {
 .not-blurred {
     filter: blur(0px);
 }
+
+.delete-btn {
+    background-color: var(--sub-base-color);
+    border: none;
+    padding: .4em .6em;
+    border-radius: 8px;
+    font-family: var(--base-paragraph-ff);
+    font-size: calc(.4rem + .7vw);
+    margin-top: .5em;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    font-size: calc(.5rem + .8vw);
+    transition: .2s;
+}

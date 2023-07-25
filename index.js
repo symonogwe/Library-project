@@ -86,6 +86,7 @@ function displayBooks() {
 
       let removeBtn = document.createElement("button");
       removeBtn.textContent = "Delete";
+      removeBtn.classList.add("delete-btn");
       removeBtn.addEventListener("click", () => {
         let removed = myLibrary.splice(divCard.dataset.index, 1);
         console.log(myLibrary);
@@ -131,6 +132,7 @@ function displayBooks() {
 
     let removeBtn = document.createElement("button");
     removeBtn.textContent = "Delete";
+    removeBtn.classList.add("delete-btn");
     removeBtn.addEventListener("click", () => {
       let removed = myLibrary.splice(divCard.dataset.index, 1);
       console.log(myLibrary);
