@@ -123,7 +123,7 @@ function displayBooks() {
 
       let readToggle = document.createElement("button");
       readToggle.textContent = "Read Status";
-      readToggle.classList.add("delete-btn");
+      readToggle.classList.add("read-status-btn");
       readToggle.addEventListener("click", () => {
         obj.changeReadStatus();
       })
@@ -172,7 +172,7 @@ function displayBooks() {
 
     let readToggle = document.createElement("button");
     readToggle.textContent = "Read Status";
-    readToggle.classList.add("delete-btn");
+    readToggle.classList.add("read-status-btn");
     readToggle.addEventListener("click", () => {
     myLibrary[divCard.dataset.index].changeReadStatus();
     })
