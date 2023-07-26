@@ -20,15 +20,31 @@ function Book(title, author, pages, readBook) {
 }
 
 Book.prototype.changeReadStatus = function() {
-  console.log(this.readBook);
+  if (this.readBook === "read") {
+    this.readBook = "not read";
+
+    cardContainer.childNodes.forEach(div => {
+      if (+(div.dataset.index) === +(myLibrary.indexOf(this))) {
+        div.querySelector(".read-status-p").textContent = `readBook: not read`;
+      }
+    });
+
+  }else{(this.readBook === "not read") 
+    this.readBook = "read";
+
+    cardContainer.childNodes.forEach(div => {
+      if (+(div.dataset.index) === +(myLibrary.indexOf(this))) {
+        div.querySelector(".read-status-p").textContent = `readBook: read`;
+      }
+    });
+
+  }
 }
 
 // GENERIC PREDEFINED BOOKS
 let book1 = new Book("JS for beginners", "Symon", 678, "read");
-let book2 = new Book("CSS for you", "Opondi", 786, "read");
 
-myLibrary.push(book1)
-myLibrary.push(book2)
+myLibrary.push(book1);
 
 // FUNCTION THAT ADDS BOOKS TO LIBRARY ARRAY
 function addBookToLibrary() {
@@ -85,6 +101,7 @@ function displayBooks() {
   
       let readBook = document.createElement("p");
       readBook.textContent = "readBook: " + obj.readBook;
+      readBook.classList.add("read-status-p");
 
       let removeBtn = document.createElement("button");
       removeBtn.textContent = "Delete";
@@ -134,6 +151,7 @@ function displayBooks() {
 
     let readBook = document.createElement("p");
     readBook.textContent = "readBook: " + myLibrary[myLibrary.length - 1].readBook;
+    readBook.classList.add("read-status-p");
 
     let removeBtn = document.createElement("button");
     removeBtn.textContent = "Delete";
