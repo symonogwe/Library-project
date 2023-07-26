@@ -189,10 +189,12 @@ label {
 
 .book-card-p {
     font-size: var(--book-card-fs);
+    margin: .1em 0;
 }
 
 .read-status-p {
     font-size: var(--book-card-fs);
+    margin: .1em 0;
 }
 
 .parent-btn-div {
