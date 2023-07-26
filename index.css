@@ -134,6 +134,7 @@ label {
 
 /* DOM STYLING */
 .book-card {
+    justify-self: center;
     height: 17vh;
     width: 20vw;
     background-color: var(--sub-color);
