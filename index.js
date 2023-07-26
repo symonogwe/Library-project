@@ -91,12 +91,15 @@ function displayBooks() {
 
       
       let author = document.createElement("p");
+      author.classList.add("book-card-p");
       author.textContent = "author: " + obj.author;
   
       let title = document.createElement("p");
+      title.classList.add("book-card-p");
       title.textContent = "title: " + obj.title;
   
       let pages = document.createElement("p");
+      pages.classList.add("book-card-p");
       pages.textContent = "pages: " + obj.pages;
   
       let readBook = document.createElement("p");
@@ -145,12 +148,15 @@ function displayBooks() {
     divCard.dataset.index = myLibrary.length - 1;
 
     let author = document.createElement("p");
+    author.classList.add("book-card-p");
     author.textContent = "author: " + myLibrary[myLibrary.length - 1].author;
 
     let title = document.createElement("p");
+    title.classList.add("book-card-p");
     title.textContent = "title: " + myLibrary[myLibrary.length - 1].title;
 
     let pages = document.createElement("p");
+    pages.classList.add("book-card-p");
     pages.textContent = "pages: " + myLibrary[myLibrary.length - 1].pages;
 
     let readBook = document.createElement("p");

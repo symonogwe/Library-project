@@ -7,6 +7,7 @@
     --sub-base-color: #ff9f1c;
     --header-fs: calc(.9rem + 2vw);
     --paragraph-fs: calc(.5rem + .6vw);
+    --book-card-fs: calc(.6rem + .7vw);
     --button-fs: calc(.7rem + .7vw);
     --logo-width: max(20px, 10%);
     --main-paragraph-fs: calc(1rem + .6vw);
@@ -23,10 +24,10 @@
 
 body {
     height: 100vh;
+    background-color: var(--base-color);
 }
 
 .lib-container {
-    background-color: var(--base-color);
     height: 100vh;
     position: relative;
 }
@@ -132,8 +133,8 @@ label {
 
 /* DOM STYLING */
 .book-card {
-    height: 15vh;
-    width: 15vw;
+    height: 17vh;
+    width: 20vw;
     background-color: var(--sub-color);
     border-radius: 12px;
     padding: .4em .8em;
@@ -182,9 +183,15 @@ label {
     transition: .2s;
 }
 
-.read-status-p {}
+.book-card-p {
+    font-size: var(--book-card-fs);
+}
+
+.read-status-p {
+    font-size: var(--book-card-fs);
+}
 
 .parent-btn-div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
