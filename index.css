@@ -135,6 +135,7 @@ label {
 
 /* DOM STYLING */
 .book-card {
+    position: relative;
     justify-self: center;
     height: 17vh;
     width: 20vw;
@@ -195,6 +196,10 @@ label {
 }
 
 .parent-btn-div {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
