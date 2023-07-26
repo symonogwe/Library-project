@@ -55,6 +55,7 @@ body {
 }
 
 .add-book {
+    margin: 1.5em 0;
     height: 8%;
     display: flex;
     justify-content: center;
