@@ -42,7 +42,7 @@ Book.prototype.changeReadStatus = function() {
 }
 
 // GENERIC PREDEFINED BOOKS
-let book1 = new Book("JS for beginners", "Symon", 678, "read");
+let book1 = new Book("The Rational Male", "Rollo Tomassi", 300, "read");
 
 myLibrary.push(book1);
 
