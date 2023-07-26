@@ -128,8 +128,12 @@ function displayBooks() {
         obj.changeReadStatus();
       })
 
+      let parentBtnDiv = document.createElement("div");
+      parentBtnDiv.classList.add("parent-btn-div");
+      parentBtnDiv.append(removeBtn, readToggle);
 
-      divCard.append(author, title, pages, readBook, removeBtn, readToggle);
+
+      divCard.append(author, title, pages, readBook, parentBtnDiv);
 
   
       cardContainer.append(divCard);
@@ -175,9 +179,13 @@ function displayBooks() {
     readToggle.classList.add("read-status-btn");
     readToggle.addEventListener("click", () => {
     myLibrary[divCard.dataset.index].changeReadStatus();
-    })
+    });
 
-    divCard.append(author, title, pages, readBook, removeBtn, readToggle);
+    let parentBtnDiv = document.createElement("div");
+    parentBtnDiv.classList.add("parent-btn-div");
+    parentBtnDiv.append(removeBtn, readToggle);
+
+    divCard.append(author, title, pages, readBook, parentBtnDiv);
 
     cardContainer.append(divCard);
 
