@@ -104,6 +104,8 @@ fieldset {
     right: 0;
     margin: auto;
     top: 30%;
+    border: none;
+    border-radius: 30px;
 }
 
 .book-options {
