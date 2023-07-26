@@ -44,6 +44,7 @@ body {
     grid-column: 1 / 2;
     align-self: center;
     justify-self: end;
+    filter: invert(88%) sepia(20%) saturate(233%) hue-rotate(127deg) brightness(101%) contrast(98%);
 }
 
 .header-h2 {
