@@ -8,6 +8,7 @@ const libContainer = document.querySelector(".lib-container");
 // LIBRARY ARRAY OF BOOK OBJECTS
 let myLibrary = [];
 
+// BOOK CLASS
 class Book {
   constructor(title, author, pages, readBook) {
   this.title = title;
