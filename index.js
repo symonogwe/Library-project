@@ -8,36 +8,34 @@ const libContainer = document.querySelector(".lib-container");
 // LIBRARY ARRAY OF BOOK OBJECTS
 let myLibrary = [];
 
-// BOOK CONSTRUCTOR FUNCTION
-function Book(title, author, pages, readBook) {
+class Book {
+  constructor(title, author, pages, readBook) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.readBook = readBook;
-  this.info = function() {
-    return `${this.title} written by ${this.author}, has ${this.pages} & I have ${this.readBook} it.`
   }
-}
 
-Book.prototype.changeReadStatus = function() {
-  if (this.readBook === "read") {
-    this.readBook = "not read";
-
-    cardContainer.childNodes.forEach(div => {
-      if (+(div.dataset.index) === +(myLibrary.indexOf(this))) {
-        div.querySelector(".read-status-p").textContent = `readBook: not read`;
-      }
-    });
-
-  }else{(this.readBook === "not read") 
-    this.readBook = "read";
-
-    cardContainer.childNodes.forEach(div => {
-      if (+(div.dataset.index) === +(myLibrary.indexOf(this))) {
-        div.querySelector(".read-status-p").textContent = `readBook: read`;
-      }
-    });
-
+  changeReadStatus = () => {
+    if (this.readBook === "read") {
+      this.readBook = "not read";
+  
+      cardContainer.childNodes.forEach(div => {
+        if (+(div.dataset.index) === +(myLibrary.indexOf(this))) {
+          div.querySelector(".read-status-p").textContent = `readBook: not read`;
+        }
+      });
+  
+    }else{(this.readBook === "not read") 
+      this.readBook = "read";
+  
+      cardContainer.childNodes.forEach(div => {
+        if (+(div.dataset.index) === +(myLibrary.indexOf(this))) {
+          div.querySelector(".read-status-p").textContent = `readBook: read`;
+        }
+      });
+  
+    }
   }
 }
 
