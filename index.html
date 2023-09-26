@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <!-- LIBRARY CONTAINER -->
     <div class="lib-container">
       <div class="lib-header">
         <img
@@ -21,45 +22,61 @@
       </div>
       <div class="book-cards-container"></div>
     </div>
-    <div id="form-container">
-      <fieldset>
-        <div class="book-options">
-          <label for="author-name">Author:</label>
-          <input class="input-1" type="text" id="author-name" />
-        </div>
-        <div class="book-options">
-          <label for="book-title">Title:</label>
-          <input class="input-1" type="text" id="book-title" />
-        </div>
-        <div class="book-options">
-          <label for="book-pages">Total Pages:</label>
-          <input class="input-1" type="number" id="book-pages" />
-        </div>
-        <div class="book-options">
-          <div class="radio-box">
+    <!-- FORM ELEMENTS -->
+    <form>
+      <div id="form-container">
+        <fieldset>
+          <div class="book-options">
+            <label for="author-name">Author:</label>
             <input
-              type="radio"
-              id="read-option"
-              name="read-book"
-              value="read"
+              class="input-1"
+              type="text"
+              id="author-name"
+              required
+              minlength="2"
             />
-            <label for="read-option">Read The Book:</label>
           </div>
-          <div class="radio-box">
+          <div class="book-options">
+            <label for="book-title">Title:</label>
+            <input class="input-1" type="text" id="book-title" required />
+          </div>
+          <div class="book-options">
+            <label for="book-pages">Total Pages:</label>
             <input
-              type="radio"
-              id="not-read"
-              name="read-book"
-              value="not read"
+              class="input-1"
+              type="number"
+              id="book-pages"
+              required
+              min="1"
             />
-            <label for="not-read">Haven't Read:</label>
           </div>
-        </div>
-        <div class="book-options">
-          <button class="submit-btn">SUBMIT</button>
-        </div>
-      </fieldset>
-    </div>
+          <div class="book-options">
+            <div class="radio-box">
+              <input
+                type="radio"
+                id="read-option"
+                name="read-book"
+                value="read"
+                required
+              />
+              <label for="read-option">Read The Book:</label>
+            </div>
+            <div class="radio-box">
+              <input
+                type="radio"
+                id="not-read"
+                name="read-book"
+                value="not read"
+              />
+              <label for="not-read">Haven't Read:</label>
+            </div>
+          </div>
+          <div class="book-options">
+            <button class="submit-btn">SUBMIT</button>
+          </div>
+        </fieldset>
+      </div>
+    </form>
     <script src="index.js"></script>
   </body>
 </html>
